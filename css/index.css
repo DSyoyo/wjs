@@ -1,0 +1,384 @@
+body {
+  height: 2000px;
+}
+
+/*头部开始*/
+.wjs_header {
+  border-bottom: 1px solid #ccc;
+}
+
+.wjs_header .item {
+  border-right: 1px solid #ccc;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+/*第一栏*/
+.wjs_header .wjs_app {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.wjs_header .wjs_app:hover {
+  color: #f92322;
+}
+
+.wjs_header .wjs_app img {
+  display: block;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  /*设置层级必须定位*/
+  z-index: 999;
+}
+
+.wjs_header .wjs_app:hover img {
+  display: block;
+}
+
+.wjs_header .item .btn-register {
+  padding: 2px 12px;
+}
+
+/*头部结束*/
+
+/*导航开始*/
+.wjs_nav .navbar {
+  background-color: #fff;
+  border: none;
+  margin-bottom: 0px;
+}
+
+.wjs_nav .navbar-brand {
+  height: 80px;
+  line-height: 50px;
+}
+
+/*把每个a的高度和行高改为50px*/
+.wjs_nav .navbar-nav > li > a {
+  display: block;
+  line-height: 50px;
+  height: 80px;
+}
+
+/*把active的a的背景色去掉*/
+.wjs_nav .navbar-default .navbar-nav > .active > a,
+.wjs_nav .navbar-default .navbar-nav > .active > a:focus {
+  background-color: #fff;
+  border-bottom: 3px solid #f92322;
+}
+
+/*鼠标一上去时，有下边框，文字颜色*/
+.wjs_nav .navbar-default .navbar-nav > li > a:hover,
+.wjs_nav .navbar-default .navbar-nav > li > a:focus {
+  border-bottom: 3px solid #f92322;
+  color: #333;
+}
+
+.wjs_nav .navbar-brand .wjs_icon_logo {
+  font-size: 50px;
+  color: #f92322;
+  vertical-align: middle;
+}
+
+.wjs_nav .navbar-brand .wjs_icon_word {
+  font-size: 36px;
+  color: #333;
+  vertical-align: middle;
+}
+
+/*右边个人中心栏位置改变*/
+.wjs_nav .navbar-toggle {
+  margin-top: 23px;
+  margin-bottom: 23px;
+}
+
+/*导航结束*/
+
+/*banner开始 借用媒体查询大于640，显示Pc端图片*/
+@media (min-width: 640px) {
+  .wjs_banner #wjs_carousel .item {
+    height: 410px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .wjs_banner #wjs_carousel img {
+    display: block;
+    max-width: none;
+    height: 410px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/*banner结束*/
+
+/*交易信息开始*/
+.wjs_info {
+  padding: 50px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.wjs_info .media {
+  cursor: pointer;
+}
+
+.wjs_info .media .wjs_icon_info {
+  font-size: 36px;
+}
+
+.wjs_info .media p {
+  padding: 5px 0;
+}
+
+/*交易信息结束*/
+
+/*预约*/
+.wjs_book {
+  border-bottom: 1px solid #ccc;
+  padding: 30px 0;
+}
+
+.wjs_book .pull-left > a {
+  color: #f92322;
+  border-bottom: 1px dashed #f92322;
+}
+
+.wjs_book .wjs_icon_clock,
+.wjs_book .wjs_icon_video {
+  font-size: 20px;
+}
+
+/*products的tab栏开始*/
+
+.wjs_products {
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: #f5f5f5;
+}
+
+.wjs_products .nav-tabs > li.active > a,
+.wjs_products .nav-tabs > li.active > a:hover,
+.wjs_products .nav-tabs > li.active > a:focus {
+  background-color: #f5f5f5;
+  border: 1px solid transparent;
+  border-bottom: 3px solid #e92322;
+}
+
+.wjs_products .nav-tabs > li > a {
+  border-radius: 0;
+  margin-right: 10px;
+}
+
+.wjs_products .nav > li > a:hover,
+.wjs_products .nav > li > a:focus {
+  background-color: #f5f5f5;
+  border: 1px solid transparent;
+}
+
+.wjs_products .nav_wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.wjs_products .nav {
+  width: 2000px;
+}
+
+/*内容部分*/
+.wjs_products .tab-content .product_box {
+  width: 100%;
+  height: 150px;
+  background-color: pink;
+  margin-top: 30px;
+}
+
+.wjs_products .tab-content .product_box.active {
+  background-color: #f92322;
+  color: #fff;
+}
+
+.wjs_products .product_box .product-right {
+  float: right;
+  width: 80px;
+  height: 150px;
+  border-left: 1px dashed blue;
+  position: relative;
+}
+
+.wjs_products .product_box .product-left {
+  overflow: hidden;
+  height: 150px;
+  position: relative;
+}
+
+.wjs_products .product-right::before,
+.wjs_products .product-right::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  left: -10px;
+}
+
+.wjs_products .product-right::before {
+  top: -10px;
+}
+
+.wjs_products .product-right::after {
+  bottom: -10px;
+
+}
+
+.wjs_products .product-right p {
+  text-align: center;
+}
+
+.wjs_products .product-right .percent {
+  margin-top: 36px;
+}
+
+.wjs_products .product-right .percent b {
+  font-size: 30px;
+}
+
+.wjs_products .product-right .rate {
+  font-size: 16px;
+}
+
+.wjs_products .product-left h4 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.wjs_products .product-left p {
+  margin-bottom: 5px;
+}
+
+.wjs_products .wjs_icon_experience {
+  font-size: 40px;
+  position: absolute;
+  left: 0;
+  top: -8px;
+}
+
+/*全部新闻开始*/
+.wjs_news {
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.wjs_news .total {
+  border-bottom: 1px solid #ccc;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.wjs_news .total::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  bottom: -3px;
+  right: -6px;
+}
+
+.wjs_news .nav-tabs > li > a {
+  width: 60px;
+  height: 60px;
+  background-color: #ccc;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  margin-bottom: 60px;
+}
+
+.wjs_news .nav-tabs > li.active > a {
+  background-color: #f92322;
+}
+
+.wjs_news .nav-tabs > li:last-child > a {
+  margin-bottom: 0;
+}
+
+.wjs_news .nav-tabs {
+  border-bottom: 1px solid transparent;
+}
+
+/*a里面的小图标*/
+.wjs_news .nav-tabs > li > a > .wjs_icon {
+  font-size: 30px;
+  color: #fff;
+}
+
+/*虚线*/
+.wjs_news .news-line {
+  height: 100%;
+  width: 1px;
+  border-left: 1px dashed #ccc;
+  position: absolute;
+  top: 0;
+  /*距离左边是固定的*/
+  left: 45px;
+}
+
+/*需求：在小屏以及超小屏，需要让 导航下面的li平均分配*/
+@media (max-width: 992px) {
+  .wjs_news .nav-tabs > li {
+    width: 25%;
+    padding: 20px 0;
+  }
+
+  .wjs_news .nav-tabs li > a {
+    margin: 0 auto;
+  }
+
+}
+
+/*信息内容部分*/
+.wjs_news .tab-content li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+/*全部新闻结束*/
+
+/*底部开始*/
+.wjs_partner {
+  padding-top: 30px;
+}
+
+.wjs_partner h3 {
+  text-align: center;
+}
+
+.wjs_partner ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/*把li转为行内块元素*/
+.wjs_partner ul li {
+  display: inline-block;
+  margin: 0 28px;
+}
+
+.wjs_partner ul li > a > .wjs_icon {
+  font-size: 60px;
+}
+
+/*底部结束*/

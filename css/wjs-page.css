@@ -1,0 +1,385 @@
+.body {
+  height: 2000px;
+}
+
+/*头部开始*/
+.wjs_header {
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+.wjs_header .item {
+  height: 40px;
+  border-right: 1px solid #ccc;
+  line-height: 40px;
+  text-align: center;
+}
+
+.wjs_header .item:last-child {
+  border-right: none;
+}
+
+/*左边第一部分*/
+.wjs_header .phone-info {
+  width: 100%;
+  height: 40px;
+  display: block;
+  position: relative;
+}
+
+.wjs_header .phone-info img {
+  display: block;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  border-top: none;
+  z-index: 999;
+}
+
+.wjs_header .phone-info:hover img {
+  display: block;
+}
+
+/*!*头部；第二部分*!*/
+/*.wjs_header .item:nth-child(2) {*/
+/*height: 40px;*/
+/*line-height:40px;*/
+/*text-align: center;*/
+/*}*/
+/*!*头部；第三部分*!*/
+/*.wjs_header .item:nth-child(3) {*/
+/*height: 40px;*/
+/*line-height:40px;*/
+/*text-align: center;*/
+/*}*/
+
+.wjs_header .item .btn-danger {
+  padding: 2px 12px;
+}
+
+.wjs_header .item .btn-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.wjs_header .item .btn-link:hover {
+  color: #f92322;
+}
+
+/*头部结束*/
+
+/*导航开始*/
+.wjs_nav .navbar {
+  background-color: #fff;
+  border: none;
+  margin-bottom: 0px;
+}
+
+.wjs_nav .navbar-nav > li > a {
+  height: 80px;
+  line-height: 50px;
+}
+
+.wjs_nav .navbar-default .navbar-nav > .active > a,
+.wjs_nav .navbar-default .navbar-nav > .active > a:hover,
+.wjs_nav .navbar-default .navbar-nav > .active > a:focus {
+  background-color: #fff;
+  border-bottom: 3px solid #f92322;
+}
+
+.wjs_nav .navbar-default .navbar-nav > li > a:hover,
+.wjs_nav .navbar-default .navbar-nav > li > a:focus {
+  border-bottom: 3px solid #f92322;
+}
+
+.wjs_nav .navbar-brand {
+  height: 80px;
+  line-height: 50px;
+}
+
+.wjs_nav .navbar-brand .wjs_icon_logo {
+  font-size: 50px;
+  color: #f92322;
+  vertical-align: middle;
+}
+
+.wjs_nav .navbar-brand .wjs_icon_word {
+  font-size: 36px;
+  color: #000;
+  height: 80px;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.wjs_nav .navbar-toggle {
+  margin-top: 23px;
+}
+
+/*导航结束*/
+
+/*banner开始 借用媒体查询大于640，显示Pc端图片*/
+@media (min-width: 640px) {
+  .wjs_banner #wjs_carousel .item {
+    height: 410px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .wjs_banner #wjs_carousel img {
+    display: block;
+    max-width: none;
+    height: 410px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/*banner结束*/
+
+/*info开始*/
+.wjs_info {
+  padding: 50px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.wjs_info .wjs_icon_info {
+  font-size: 36px;
+}
+
+.wjs_info .media-body p {
+  padding: 5px 0;
+}
+
+/*info结束*/
+
+/*预约开始*/
+.wjs_book {
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.wjs_book .pull-left .wjs_icon_clock {
+  font-size: 20px;
+}
+
+.wjs_book .pull-right .wjs_icon_video {
+  font-size: 20px;
+}
+
+/*预约结束*/
+
+/*<!--特别推荐-->*/
+.wjs_intro {
+  background-color: #f5f5f5;
+  padding: 30px 0;
+}
+
+.wjs_intro .nav-tabs > li.active > a,
+.wjs_intro .nav-tabs > li.active > a:hover,
+.wjs_intro .nav-tabs > li.active > a:focus {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: 3px solid #f92322;
+}
+
+.wjs_intro .nav-tabs > li > a:hover {
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+/*内容部分*/
+
+.tab-content .product-box {
+  height: 150px;
+  background-color: pink;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+.tab-content .product-box .product-right {
+  width: 80px;
+  height: 150px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 1px dashed blue;
+  text-align: center;
+}
+
+.tab-content .product-box .product-right p:first-child {
+  margin-top: 36px;
+}
+
+.tab-content .product-box .product-right p > b {
+  font-size: 30px;
+
+}
+
+.tab-content .product-box .product-right p:last-child {
+  font-size: 16px;
+}
+
+.tab-content .product-box .product-right::before,
+.tab-content .product-box .product-right::after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+}
+
+.tab-content .product-box .product-right::before {
+  top: -10px;
+}
+
+.tab-content .product-box .product-right::after {
+  bottom: -10px;
+}
+
+.tab-content .product-box .product-left {
+  margin-right: 80px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.product-box .product-left h4 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.product-box .product-left p {
+  line-height: 16px;
+}
+
+.product-box .product-left .wjs_icon_experience {
+  font-size: 50px;
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+
+.wjs_intro .product-box.active {
+  background-color: #f92322;
+  color: #fff;
+}
+
+/*新闻开始*/
+.wjs_news {
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.wjs_news h3 {
+  border-bottom: 1px solid #ccc;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.wjs_news h3::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  position: absolute;
+  right: -6px;
+  bottom: -3px;
+}
+
+.wjs_news .nav-tabs > li.active > a,
+.wjs_news .nav-tabs > li.active > a:hover,
+.wjs_news .nav-tabs > li.active > a:focus {
+  border: 1px solid transparent;
+}
+
+.wjs_news .nav-tabs > li > a,
+.wjs_news .nav-tabs > li > a:hover {
+  background-color: #ccc;
+  border: 1px solid transparent;
+}
+
+.wjs_news .nav-tabs {
+  border-bottom: 1px solid transparent;
+}
+
+.wjs_news .nav-tabs > li > a {
+  width: 60px;
+  height: 60px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 60px;
+}
+
+.wjs_news .nav-tabs > li:last-child > a {
+  margin-bottom: 0;
+}
+
+.wjs_news .nav-tabs > li > a > .wjs_icon {
+  font-size: 30px;
+  color: #fff;
+}
+
+.wjs_news .nav-tabs > li.active > a {
+  background-color: #f92322;
+}
+
+.wjs_news .line {
+  height: 100%;
+  width: 1px;
+  border-left: 1px dashed #ccc;
+  position: absolute;
+  top: 0;
+  left: 45px;
+}
+
+.wjs_news .tab-content li {
+  list-style: none;
+  padding: 14px 0;
+}
+
+@media (max-width: 992px) {
+  .wjs_news .nav-tabs li {
+    width: 25%;
+    padding: 20px 0;
+  }
+
+  .wjs_news .nav-tabs li > a {
+    margin: 0 auto;
+  }
+}
+
+/*合作伙伴*/
+
+.wjs_partner {
+  padding: 30px 0;
+}
+
+.wjs_partner h3 {
+  text-align: center;
+}
+
+.wjs_partner ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.wjs_partner ul li {
+  display: inline-block;
+  margin: 0 28px;
+}
+
+.wjs_partner ul li > a > .wjs_icon {
+  font-size: 60px;
+}
